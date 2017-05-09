@@ -24,6 +24,31 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
+    'import/extensions': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/no-unresolved': [2, { 'ignore': ['electron'] }],
+    'linebreak-style': 0,
+    'jsx-quotes': ['error', 'prefer-single'],
+    'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
+    'react/prefer-stateless-function': 0,
+    'object-shorthand': 0,
+    'func-names': 0,
+    'class-methods-use-this': ['error', {
+      exceptMethods: [
+        'render',
+        'getInitialState',
+        'getDefaultProps',
+        'getChildContext',
+        'componentWillMount',
+        'componentDidMount',
+        'componentWillReceiveProps',
+        'shouldComponentUpdate',
+        'componentWillUpdate',
+        'componentDidUpdate',
+        'componentWillUnmount',
+        'Utils'
+      ],
+    }],
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       'js': 'never',
